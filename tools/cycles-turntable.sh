@@ -11,5 +11,5 @@ for i in $(seq 0 $((n-1))); do
   done
   [ -f $tmp/f$(printf %03d $i).png ] || { echo "frame $i failed"; exit 1; }
 done
-ffmpeg -loglevel error -y -framerate 8 -i $tmp/f%03d.png -vf 'scale=560:-1:flags=lanczos,split[a][b];[a]palettegen=max_colors=192:stats_mode=diff[p];[b][p]paletteuse=dither=bayer:bayer_scale=4:diff_mode=rectangle' -loop 0 $out/$id.gif
+ffmpeg -loglevel error -y -framerate 10 -i $tmp/f%03d.png -vf 'scale=480:-1:flags=lanczos,split[a][b];[a]palettegen=max_colors=128:stats_mode=diff[p];[b][p]paletteuse=dither=bayer:bayer_scale=5:diff_mode=rectangle' -loop 0 $out/$id.gif
 echo "$out/$id.gif $(du -h $out/$id.gif | cut -f1)"

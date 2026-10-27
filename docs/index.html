@@ -35,12 +35,10 @@
 </main>
 <script>
   const MODELS = [
-    { id: 'arch-b', title: 'Arch of Constantine (option b)', tag: ['good', 'Certified'], note: '202 parts. Passes our strength checks and BrickAgent’s independent checker. A reusable block placed into larger scenes.', anchor: '3-arch-of-constantine-a-certified-sub-assembly' },
-    { id: 'arch-a', title: 'Arch of Constantine (option a)', tag: ['good', 'Certified'], note: 'The same 202-part design in the other colour option: Tan columns, Light Bluish Grey attic.', anchor: '3-arch-of-constantine-a-certified-sub-assembly' },
-    { id: 'weathertop', title: 'Weathertop', tag: ['good', 'Every check passes'], note: '1,107 parts. Strength margins 0.83 sitting on a table, 0.98 lifted, 0.95 carried. Generated instructions and an order list.', anchor: '4-weathertop-a-complete-build-with-instructions' },
-    { id: 'fortress', title: 'The fortress', tag: ['bad', 'Buildable, boring'], note: '2,012 parts. 88 % of the parts sit in runs of six or more identical touching parts. It scores 0.14 on the build-experience metric.', anchor: '6-the-fortress-what-bad-looks-like' },
-    { id: 'argonath-ours', title: 'Argonath: our pipeline', tag: ['split', 'Lost the blind pick'], note: '5,293 parts. Richer colour and stronger engineering, weaker composition and hands.', anchor: '7-argonath-where-the-agent-won' },
-    { id: 'argonath-agent', title: 'Argonath: Claude in BrickAgent', tag: ['split', 'Won the blind pick'], note: '2,224 parts in 13 minutes. Better hands and gorge, but our strength check finds one stud holding 20 parts.', anchor: '7-argonath-where-the-agent-won' },
+    { id: 'arch-b', title: 'Arch of Constantine (option b)', tag: ['good', 'Certified'], note: '202 parts. Passes our strength checks and BrickAgent’s independent checker. A reusable block placed into larger scenes.', anchor: '1-arch-of-constantine' },
+    { id: 'arch-a', title: 'Arch of Constantine (option a)', tag: ['good', 'Certified'], note: 'The same 202-part design in the other colour option: Tan columns, Light Bluish Grey attic.', anchor: '1-arch-of-constantine' },
+    { id: 'weathertop', title: 'Weathertop', tag: ['good', 'Every check passes'], note: '1,107 parts. Strength margins 0.83 sitting on a table, 0.98 lifted, 0.95 carried. Generated instructions and an order list.', anchor: '2-weathertop' },
+    { id: 'fortress', title: 'The fortress', tag: ['bad', 'Buildable, boring'], note: '2,012 parts. 88 % of the parts sit in runs of six or more identical touching parts. It scores 0.14 on the build-experience metric.', anchor: '3-the-fortress-what-bad-looks-like' },
   ];
   const repo = 'https://github.com/JakubChudik/text-to-brick-showcase';
   const grid = document.getElementById('grid');
@@ -49,7 +47,7 @@
     card.className = 'card'; card.id = m.id;
     card.innerHTML = `
       <model-viewer src="models/${m.id}.glb" alt="3D model: ${m.title}" camera-controls touch-action="pan-y"
-        auto-rotate auto-rotate-delay="0" rotation-per-second="18deg" interaction-prompt="none"
+        auto-rotate auto-rotate-delay="0" rotation-per-second="8deg" interaction-prompt="none"
         tone-mapping="neutral" exposure="0.9" environment-image="neutral" shadow-intensity="1" shadow-softness="0.9"
         camera-orbit="35deg 62deg auto" loading="lazy"></model-viewer>
       <div class="meta">

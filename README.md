@@ -201,7 +201,7 @@ Colosseum, Spiš Castle and Neuschwanstein have also been through the full stren
 
 [![Samoyed turntable](builds/turntables/samoyed.gif)](builds/turntables/samoyed.mp4)
 
-[Turntable, one 360° turn in 12 s (MP4, 2.4 MB)](builds/turntables/samoyed.mp4) · [Interactive 3D](https://jakubchudik.github.io/text-to-brick-showcase/#samoyed) · [`samoyed.ldr`](builds/07-samoyed/samoyed.ldr) · [`samoyed.glb`](docs/models/samoyed.glb)
+[Turntable, one 360° turn in 12 s (MP4, 2.2 MB)](builds/turntables/samoyed.mp4) · [Interactive 3D](https://jakubchudik.github.io/text-to-brick-showcase/#samoyed) · [`samoyed.ldr`](builds/07-samoyed/samoyed.ldr) · [`samoyed.glb`](docs/models/samoyed.glb)
 
 - A Samoyed sitting on a small round lawn: a coat of curved slopes and tiles shingled like fur, a face that reads at once (almond eyes, a black nose, a smile with a pink tongue), cream-lined ears, a thick ruff, and a plume tail that curls up and over.
 - On the lawn a red ball and a few flowers. The model is shown on a dark backdrop, which the renderer picks for mostly white builds.

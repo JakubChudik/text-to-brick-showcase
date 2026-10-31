@@ -7,7 +7,7 @@
 //   $T2L/node_modules/.bin/tsx tools/studio-shots.mjs MODEL.ldr --out-dir DIR --turntable 144 [--az 30 --el 28 --width 1280 --height 800 --samples 96]
 // shots.json: { "shots": [ { "name": "front", "az": 330, "el": 28 },                                     // the whole model, fitted, seen from azimuth az, elevation el
 //                          { "name": "gladiators", "at": [41, 4, 57], "span": 16, "az": 330, "el": 24 } ] } // a close-up: look at (x, y plates, z), 16 studs tall
-// Pictures: <out-dir>/<name>.png (a turntable: turn000.png ...). Backdrop 'auto' (a near-black sweep for a mostly white model), exposure 0.3.
+// Pictures: <out-dir>/<name>.png (a turntable: turn000.png ...). Backdrop 'auto' (a near-black sweep for a mostly white model), exposure = the renderer's calibrated default (packages/render/src/calibration.ts; --exposure overrides it).
 import { readFileSync, writeFileSync, mkdirSync, existsSync, statSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { parseArgs } from 'node:util';
@@ -65,7 +65,7 @@ if (values['skip-existing']) {
 }
 const work = join(outDir, '.work');
 const prep = prepareStudio({
-  bricks: drawn, pack: uni.pack, name: 'shots', preset: 'hero', width, height, samples: num(values.samples, undefined), quality, exposure: num(values.exposure, 0.3), backdrop: values.backdrop ?? 'auto',
+  bricks: drawn, pack: uni.pack, name: 'shots', preset: 'hero', width, height, samples: num(values.samples, undefined), quality, exposure: num(values.exposure, undefined), backdrop: values.backdrop ?? 'auto',
   views: plan.map((p) => ({ name: p.name, preset: 'hero', view: { azDeg: p.shot?.az, elDeg: p.shot?.el, fovDeg: p.shot?.fov ?? vfovDefault }, out: join(outDir, `${p.name}.png`) })), out: join(outDir, 'unused.png'), workDir: work,
 });
 const scene = JSON.parse(readFileSync(prep.sceneJsonPath, 'utf8'));

@@ -1,6 +1,6 @@
 #!/bin/zsh
 # tools/cycles-turntable.sh <model.ldr> <id> [frames=144]: a slow turntable of a model, rendered with the text-to-lego studio renderer (Blender Cycles, the same studio sweep,
-# lights and exposure 0.3 as the stills), assembled into builds/turntables/<id>.mp4 (H.264, web-friendly, faststart) and builds/turntables/<id>.gif (a lighter preview for the README).
+# lights and calibrated exposure as the stills), assembled into builds/turntables/<id>.mp4 (H.264, web-friendly, faststart) and builds/turntables/<id>.gif (a lighter preview for the README).
 # Run from this repo; T2L points at the text-to-lego checkout (node_modules installed, Blender at /Applications/Blender.app).
 # ONE Blender process renders every frame (import and shaders once; a Metal GPU error relaunches Blender for the frames not yet drawn only), and tools/studio-shots.mjs keeps ONE camera
 # distance and target for the whole turn (the box is fitted over every azimuth, so the model does not breathe in and out as it turns). One full 360 degree turn lasts frames / FPS seconds.

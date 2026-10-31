@@ -1,9 +1,11 @@
 // tools/studio-shots.mjs: the cameras of one model, drawn in ONE Blender launch by the text-to-lego studio renderer (Cycles, same studio sweep, lights,
-// colours, bevels and exposure as `pnpm render:studio`). It adds two things render:studio has no flag for:
+// colours, bevels and exposure as `pnpm render:studio`). Since text-to-lego sprint 29 (docs/perf/render-efficiency-2026-10-31.md) it draws the `showcase` tier by default: Cycles on the CPU
+// (4 threads, nice 10, an 8 GB cap, never the GPU unless T2L_RENDER_GPU=1), denoised, 2400 x 1500 for a still and 1280 x 800 for a turntable frame; the sizes and samples come from the renderer's own
+// plan for the use (`planFor('still' | 'turntable')`), so they follow it. It adds two things render:studio has no flag for:
 //   * close-ups with their own direction and zoom: a point of the model (studs, plates, studs: x right, y up, z toward the front) and the height of the picture in studs;
 //   * a turntable whose camera keeps ONE distance and ONE target for every frame (render:studio --turntable refits the box per frame, so a long model breathes in and out).
 // Run it with the checkout's tsx (T2L = the text-to-lego checkout, default ~/dev/coding/text-to-lego):
-//   $T2L/node_modules/.bin/tsx tools/studio-shots.mjs MODEL.ldr --out-dir DIR --stills shots.json [--only name,name] [--width 2400 --height 1500 --samples 256]
+//   $T2L/node_modules/.bin/tsx tools/studio-shots.mjs MODEL.ldr --out-dir DIR --stills shots.json [--only name,name] [--width 2400 --height 1500 --samples 24]
 //   $T2L/node_modules/.bin/tsx tools/studio-shots.mjs MODEL.ldr --out-dir DIR --turntable 144 [--az 30 --el 28 --width 1280 --height 800 --samples 96]
 // shots.json: { "shots": [ { "name": "front", "az": 330, "el": 28 },                                     // the whole model, fitted, seen from azimuth az, elevation el
 //                          { "name": "gladiators", "at": [41, 4, 57], "span": 16, "az": 330, "el": 24 } ] } // a close-up: look at (x, y plates, z), 16 studs tall
@@ -13,18 +15,20 @@ import { join, resolve } from 'node:path';
 import { parseArgs } from 'node:util';
 
 const T2L = resolve(process.env.T2L ?? `${process.env.HOME}/dev/coding/text-to-lego`);
-const { readModelText, loadStdPack, universalPackFor, prepareStudio, runStudio, cameraPreset, LDU_TO_M } = await import(`${T2L}/packages/render/src/index.ts`);
+const { readModelText, loadStdPack, universalPackFor, prepareStudio, runStudio, cameraPreset, planFor, LDU_TO_M } = await import(`${T2L}/packages/render/src/index.ts`);
 
 const { values, positionals } = parseArgs({
   allowPositionals: true,
   options: { 'out-dir': { type: 'string' }, stills: { type: 'string' }, only: { type: 'string' }, turntable: { type: 'string' }, az: { type: 'string' }, el: { type: 'string' }, fov: { type: 'string' },
-    width: { type: 'string' }, height: { type: 'string' }, samples: { type: 'string' }, quality: { type: 'string' }, exposure: { type: 'string' }, backdrop: { type: 'string' }, fill: { type: 'string' }, margin: { type: 'string' }, 'skip-existing': { type: 'boolean' } },
+    width: { type: 'string' }, height: { type: 'string' }, samples: { type: 'string' }, quality: { type: 'string' }, exposure: { type: 'string' }, backdrop: { type: 'string' }, fill: { type: 'string' }, margin: { type: 'string' }, 'skip-existing': { type: 'boolean' }, step: { type: 'string' } },
 });
 if (positionals.length !== 1 || !values['out-dir'] || (!values.stills && !values.turntable)) { console.error(readFileSync(new URL(import.meta.url), 'utf8').split('\n').slice(0, 14).join('\n')); process.exit(2); }
 const modelPath = resolve(positionals[0]), outDir = resolve(values['out-dir']);
 const num = (v, d) => (v === undefined ? d : Number(v));
-const quality = values.quality ?? 'final';
-const width = num(values.width, 2400), height = num(values.height, 1500), aspect = width / height;
+const use = planFor(values.turntable ? 'turntable' : 'still');         // the renderer's own default tier, size and samples for this use (and the device: the CPU for Cycles)
+const quality = values.quality ?? use.quality;
+const width = num(values.width, use.width), height = num(values.height, use.height), aspect = width / height;
+const step = num(values.step, 1);
 const DEG = Math.PI / 180;
 const sub = (a, b) => a.map((v, k) => v - b[k]), dot = (a, b) => a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
 const cross = (a, b) => [a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[0] * b[2], a[0] * b[1] - a[1] * b[0]];
@@ -57,15 +61,17 @@ if (values.stills) {
 }
 mkdirSync(outDir, { recursive: true });
 // --skip-existing: draw only the pictures that are not there yet (a run that was cut short by the GPU is simply started again)
-const total = plan.length;
+const total = plan.length;                                  // a turntable: the frames of the WHOLE turn (the camera is fitted over all of them)
+if (values.turntable && step > 1) plan = plan.filter((p) => p.turn.i % step === 0);       // --step K: only every K-th frame is drawn, the video interpolates the rest
+const wanted = plan.length;
 if (values['skip-existing']) {
   plan = plan.filter((p) => { const f = join(outDir, `${p.name}.png`); return !(existsSync(f) && statSync(f).size > 20000); });
-  console.log(`${total - plan.length} of ${total} pictures already there, ${plan.length} to draw`);
+  console.log(`${wanted - plan.length} of ${wanted} pictures already there, ${plan.length} to draw`);
   if (!plan.length) process.exit(0);
 }
 const work = join(outDir, '.work');
 const prep = prepareStudio({
-  bricks: drawn, pack: uni.pack, name: 'shots', preset: 'hero', width, height, samples: num(values.samples, undefined), quality, exposure: num(values.exposure, undefined), backdrop: values.backdrop ?? 'auto',
+  bricks: drawn, pack: uni.pack, name: 'shots', preset: 'hero', width, height, samples: num(values.samples, quality === use.quality ? use.samples : undefined), quality, exposure: num(values.exposure, undefined), backdrop: values.backdrop ?? 'auto',
   views: plan.map((p) => ({ name: p.name, preset: 'hero', view: { azDeg: p.shot?.az, elDeg: p.shot?.el, fovDeg: p.shot?.fov ?? vfovDefault }, out: join(outDir, `${p.name}.png`) })), out: join(outDir, 'unused.png'), workDir: work,
 });
 const scene = JSON.parse(readFileSync(prep.sceneJsonPath, 'utf8'));
@@ -108,11 +114,11 @@ scene.camera = scene.views[0].camera;
 writeFileSync(prep.sceneJsonPath, JSON.stringify(scene, null, 1));
 console.log(`${model.bricks.length} bricks (${prep.placed} placed, ${prep.enclosed} enclosed), backdrop ${prep.backdrop}, ${scene.views.length} views, ${width}x${height}, ${scene.render.samples} samples, ${quality}`);
 const t0 = Date.now();
-// The GPU is shared with whatever else runs on the Mac, and a Metal 'victim of GPU error' kills a launch now and then. runStudio relaunches Blender for the pictures that are
-// not yet written (each launch keeps what it finished), so a long turntable always makes progress; the CPU fallback (about 100x slower) is switched off and a launch that
-// makes no progress at all ends the run instead.
+// The default device is the CPU (text-to-lego sprint 29: Cycles on the GPU needed a relaunch in 18 of 124 ledger calls and drives the GPU to 100 %), where this loop never fires.
+// With T2L_RENDER_GPU=1 a Metal 'victim of GPU error' can kill a launch: runStudio relaunches Blender for the pictures not yet written (each launch keeps what it finished), at most 4 times
+// (it was 80), and a launch that makes no progress at all ends the run.
 let lastPending = -1, stuck = 0;
-const run = await runStudio(prep, { maxRetries: 80, fallback: false,
+const run = await runStudio(prep, { maxRetries: 4, fallback: false,
   onRetry: (r) => {
     console.log(`  [relaunch ${r.attempt}] ${r.pending} picture(s) left: ${r.reason.slice(0, 90)}`);
     stuck = r.pending === lastPending ? stuck + 1 : 0; lastPending = r.pending;

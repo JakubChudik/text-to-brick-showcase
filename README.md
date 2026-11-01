@@ -38,7 +38,7 @@ Colosseum, Spiš Castle and Neuschwanstein have also been through the full stren
 
 [![Amon Sûl (Weathertop) turntable](builds/turntables/amon-sul.gif)](builds/turntables/amon-sul.mp4)
 
-[Turntable, one 360° turn in 12 s (MP4, 3.3 MB)](builds/turntables/amon-sul.mp4) · [Interactive 3D](https://jakubchudik.github.io/text-to-brick-showcase/#amon-sul) · [`amon-sul.ldr`](builds/01-amon-sul/amon-sul.ldr) · [`amon-sul.glb`](docs/models/amon-sul.glb)
+[Turntable, one 360° turn in 12 s (MP4, 3.9 MB)](builds/turntables/amon-sul.mp4) · [Interactive 3D](https://jakubchudik.github.io/text-to-brick-showcase/#amon-sul) · [`amon-sul.ldr`](builds/01-amon-sul/amon-sul.ldr) · [`amon-sul.glb`](docs/models/amon-sul.glb)
 
 - The hill of Weathertop as a single landscape model: a mound of mottled grey, tan and olive-green bricks laid in stepped courses, with cheese slopes along the broken edges and patches of green where grass and moss take over.
 - On the summit a ring wall stands in ruins, its arch broken. Low on the slope a stone gateway leads into a small camp alcove, where a fire burns, built of orange and yellow bricks.

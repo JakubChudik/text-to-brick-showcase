@@ -146,7 +146,7 @@ Colosseum, Spiš Castle and Neuschwanstein have also been through the full stren
 
 [![Ministry of Magic turntable](builds/turntables/ministry-of-magic.gif)](builds/turntables/ministry-of-magic.mp4)
 
-[Turntable, one 360° turn in 12 s (MP4, 4.7 MB)](builds/turntables/ministry-of-magic.mp4) · [Interactive 3D](https://jakubchudik.github.io/text-to-brick-showcase/#ministry-of-magic) · [`ministry-of-magic.ldr`](builds/05-ministry-of-magic/ministry-of-magic.ldr) · [`ministry-of-magic.glb`](docs/models/ministry-of-magic.glb)
+[Turntable, one 360° turn in 12 s (MP4, 4.1 MB)](builds/turntables/ministry-of-magic.mp4) · [Interactive 3D](https://jakubchudik.github.io/text-to-brick-showcase/#ministry-of-magic) · [`ministry-of-magic.ldr`](builds/05-ministry-of-magic/ministry-of-magic.ldr) · [`ministry-of-magic.glb`](docs/models/ministry-of-magic.glb)
 
 - The Ministry of Magic atrium as in the film, cut open at the front: a black and grey checkerboard floor of single tiles, green walls with gold-railed galleries on several levels, fireplaces along the back wall and a stepped, non-rectangular base.
 - In the pool the Fountain of Magical Brethren stands cracked by the duel: a golden wizard, witch and rearing centaur in brick, with a goblin and a house-elf as gold minifigures. Dumbledore and Voldemort fight across it, a green curse beam against a shield of water, with a ring of fire at the edge.

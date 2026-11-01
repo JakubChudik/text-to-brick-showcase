@@ -118,7 +118,7 @@ const t0 = Date.now();
 // With T2L_RENDER_GPU=1 a Metal 'victim of GPU error' can kill a launch: runStudio relaunches Blender for the pictures not yet written (each launch keeps what it finished), at most 4 times
 // (it was 80), and a launch that makes no progress at all ends the run.
 let lastPending = -1, stuck = 0;
-const run = await runStudio(prep, { maxRetries: 4, fallback: false,
+const run = await runStudio(prep, { use: values.turntable ? 'turntable' : 'still', maxRetries: 4, fallback: false,
   onRetry: (r) => {
     console.log(`  [relaunch ${r.attempt}] ${r.pending} picture(s) left: ${r.reason.slice(0, 90)}`);
     stuck = r.pending === lastPending ? stuck + 1 : 0; lastPending = r.pending;

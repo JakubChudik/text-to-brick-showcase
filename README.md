@@ -65,7 +65,7 @@ Colosseum, Spiš Castle and Neuschwanstein have also been through the full stren
 
 [![The Colosseum turntable](builds/turntables/colosseum.gif)](builds/turntables/colosseum.mp4)
 
-[Turntable, one 360° turn in 12 s (MP4, 6.8 MB)](builds/turntables/colosseum.mp4) · [Interactive 3D](https://jakubchudik.github.io/text-to-brick-showcase/#colosseum) · [`colosseum.ldr`](builds/02-colosseum/colosseum.ldr) · [`colosseum.glb`](docs/models/colosseum.glb)
+[Turntable, one 360° turn in 12 s (MP4, 5.8 MB)](builds/turntables/colosseum.mp4) · [Interactive 3D](https://jakubchudik.github.io/text-to-brick-showcase/#colosseum) · [`colosseum.ldr`](builds/02-colosseum/colosseum.ldr) · [`colosseum.glb`](docs/models/colosseum.glb)
 
 - The Colosseum in modern Rome: an arcaded oval of three storeys with half columns and a corbelled attic, broken open on the south side so the camera can look into the arena, the stands and the hypogeum. Around it a piazza with umbrella pines, a road with a bus and a tram, and the Arch of Constantine.
 - Ten small scenes with real minifigures and animals: the gladiators' school (two gladiators and their trainer at a training post and weapon rack), the lion den, the hypogeum lift raising a lion into the arena, a duel on the arena floor with a lion circling the gladiators, the emperor's box with two senators, the smithy in the breach of the back wall, an armourer's yard, a cage with a lion cub, a gelato stall, and a cat asleep on the attic.

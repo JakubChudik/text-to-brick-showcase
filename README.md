@@ -174,7 +174,7 @@ Colosseum, Spiš Castle and Neuschwanstein have also been through the full stren
 
 [![Neuschwanstein turntable](builds/turntables/neuschwanstein.gif)](builds/turntables/neuschwanstein.mp4)
 
-[Turntable, one 360° turn in 12 s (MP4, 3.5 MB)](builds/turntables/neuschwanstein.mp4) · [Interactive 3D](https://jakubchudik.github.io/text-to-brick-showcase/#neuschwanstein) · [`neuschwanstein.ldr`](builds/06-neuschwanstein/neuschwanstein.ldr) · [`neuschwanstein.glb`](docs/models/neuschwanstein.glb)
+[Turntable, one 360° turn in 12 s (MP4, 3.8 MB)](builds/turntables/neuschwanstein.mp4) · [Interactive 3D](https://jakubchudik.github.io/text-to-brick-showcase/#neuschwanstein) · [`neuschwanstein.ldr`](builds/06-neuschwanstein/neuschwanstein.ldr) · [`neuschwanstein.glb`](docs/models/neuschwanstein.glb)
 
 - Neuschwanstein Castle on its crag above the Pöllat gorge: the white Palas with staggered blocks and an attached oriel tower, grey-spired towers, the gatehouse, and the Marienbrücke across the gorge. Below it a forest on four levels of hillside, with spruces, pines and broadleaf trees of many heights, ferns, flowers and boulders, and the Alpsee with two white birds.
 - Small scenes with real minifigures and animals: tourists photographing the gorge from the bridge, a coachman with his horse and carriage on the forest road, a hiker and his dog on the trail, a hunter and a deer in a clearing, the king on a balcony of the Palas, masons on a scaffold at the gatehouse, and a forester's camp at the back.

@@ -119,7 +119,7 @@ Colosseum, Spiš Castle and Neuschwanstein have also been through the full stren
 
 [![Orthanc turntable](builds/turntables/orthanc.gif)](builds/turntables/orthanc.mp4)
 
-[Turntable, one 360° turn in 12 s (MP4, 3.3 MB)](builds/turntables/orthanc.mp4) · [Interactive 3D](https://jakubchudik.github.io/text-to-brick-showcase/#orthanc) · [`orthanc.ldr`](builds/04-orthanc/orthanc.ldr) · [`orthanc.glb`](docs/models/orthanc.glb)
+[Turntable, one 360° turn in 12 s (MP4, 3.7 MB)](builds/turntables/orthanc.mp4) · [Interactive 3D](https://jakubchudik.github.io/text-to-brick-showcase/#orthanc) · [`orthanc.ldr`](builds/04-orthanc/orthanc.ldr) · [`orthanc.glb`](docs/models/orthanc.glb)
 
 - The black tower of Isengard in the middle of the flood: four sharp horns on the summit, a ring wall torn open where the Isen pours through, floodwater made of translucent tiles, and a dark plain of churned mud and slag.
 - Four Ents built as walking trees stride across the plain, each with a boulder in hand or a block of torn masonry; orcs tend burning furnace shafts and smoke stacks; Saruman watches from the summit. Merry and Pippin stand at a stone storeroom by the gate, with barrels, sacks and a table of food.

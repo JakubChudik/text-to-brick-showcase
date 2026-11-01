@@ -2,13 +2,13 @@
 # tools/cycles-turntable.sh <model.ldr> <id> [frames=144]: a slow turntable of a model, rendered with the text-to-lego studio renderer (Blender Cycles, the same studio sweep,
 # lights and calibrated exposure as the stills), assembled into builds/turntables/<id>.mp4 (H.264, web-friendly, faststart) and builds/turntables/<id>.gif (a lighter preview for the README).
 # Since text-to-lego sprint 29 (docs/perf/render-efficiency-2026-10-31.md) the defaults are the renderer's `turntable` plan: the `showcase` tier = Cycles on the CPU (4 threads, nice 10, an 8 GB cap, NO GPU unless
-# T2L_RENDER_GPU=1), 8 samples + OpenImageDenoise at 1280 x 800, and only every 3rd frame is rendered (STEP=3: 48 renders for 144 frames); ffmpeg interpolates the frames in between and closes the loop.
+# T2L_RENDER_GPU=1), 8 samples + OpenImageDenoise at 1280 x 800, and EVERY frame is rendered (STEP=1: 144 renders). STEP=3 renders every 3rd frame and lets ffmpeg interpolate the frames in between and close the loop, but that smeared the edges of detailed models (text-to-lego lesson L-29-1): use it only for builds with large plain faces.
 # Run from this repo; T2L points at the text-to-lego checkout (node_modules installed, Blender at /Applications/Blender.app).
 # ONE Blender process renders every frame (import and shaders once; a Metal GPU error relaunches Blender for the frames not yet drawn only), and tools/studio-shots.mjs keeps ONE camera
 # distance and target for the whole turn (the box is fitted over every azimuth, so the model does not breathe in and out as it turns). One full 360 degree turn lasts frames / FPS seconds.
 # Environment: FPS (12: 144 frames = 12 s a turn)  WIDTH x HEIGHT (1280 x 800)  SAMPLES (8, then denoised)  EL (28, camera elevation)  AZ (30, first frame)
 #              QUALITY=showcase|preview|final|fast (showcase: the default; final: Cycles 512 samples, 30x the work; fast: EEVEE, the quick look, a different look from the stills)
-#              STEP=3 (render every 3rd frame, interpolate the rest; 1 = render every frame)  INTERP=mci|blend (ffmpeg minterpolate with motion compensation, or a plain cross-fade)
+#              STEP=1 (render every frame; 3 = render every 3rd frame and interpolate the rest)  INTERP=mci|blend (ffmpeg minterpolate with motion compensation, or a plain cross-fade)
 #              RESUME=1 (keep the frames already in $TMPDIR/cyc-<id>: a turntable cut short is finished, not redone)  GIF_WIDTH (480)  GIF_STEP (2: every 2nd frame, 6 fps)  GIF_COLORS (128)  KEEP=1 (keep the frames in $TMPDIR/cyc-<id>)
 set -e
 T2L=${T2L:-$HOME/dev/coding/text-to-lego}; model=$1; id=$2; n=${3:-144}
@@ -19,7 +19,7 @@ fps=${FPS:-12}; step=${GIF_STEP:-2}; gw=${GIF_WIDTH:-480}; gc=${GIF_COLORS:-128}
 case $model in /*) ;; *) model=$here/$model ;; esac
 [ -f $model ] || { echo "no such model: $model"; exit 1; }
 [ -n "$RESUME" ] || rm -rf $tmp; mkdir -p $tmp $out; rm -f $tmp/f[0-9]*.png(N); rm -rf $tmp/gif
-kstep=${STEP:-3}; [ $((n % kstep)) -eq 0 ] || { echo "STEP=$kstep must divide the $n frames"; exit 2; }; want=$((n / kstep))
+kstep=${STEP:-1}; [ $((n % kstep)) -eq 0 ] || { echo "STEP=$kstep must divide the $n frames"; exit 2; }; want=$((n / kstep))
 q=(--width ${WIDTH:-1280} --height ${HEIGHT:-800} --samples ${SAMPLES:-8} --quality ${QUALITY:-showcase} --step $kstep)
 # the GPU is shared with whatever else runs on the Mac and now and then drops a launch: start again for the frames that are missing (up to 8 times)
 for attempt in 1 2 3 4 5 6 7 8; do

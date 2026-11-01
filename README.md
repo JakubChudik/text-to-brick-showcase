@@ -92,7 +92,7 @@ Colosseum, Spiš Castle and Neuschwanstein have also been through the full stren
 
 [![Spiš Castle turntable](builds/turntables/spis-castle.gif)](builds/turntables/spis-castle.mp4)
 
-[Turntable, one 360° turn in 12 s (MP4, 4.7 MB)](builds/turntables/spis-castle.mp4) · [Interactive 3D](https://jakubchudik.github.io/text-to-brick-showcase/#spis-castle) · [`spis-castle.ldr`](builds/03-spis-castle/spis-castle.ldr) · [`spis-castle.glb`](docs/models/spis-castle.glb)
+[Turntable, one 360° turn in 12 s (MP4, 5.1 MB)](builds/turntables/spis-castle.mp4) · [Interactive 3D](https://jakubchudik.github.io/text-to-brick-showcase/#spis-castle) · [`spis-castle.ldr`](builds/03-spis-castle/spis-castle.ldr) · [`spis-castle.glb`](docs/models/spis-castle.glb)
 
 - Spiš Castle in Slovakia on its layered travertine ridge: a lower bailey, a middle court and a two-layer upper castle with bastions on the walls, the inner castle with its gates, and a banded round keep. Small village houses, one brick tall, line the road along the foot of the hill so the castle towers over them.
 - The courtyards are lived in: a stable where a groom strokes a horse, gate guards beside a half-raised portcullis, a smithy with a glowing forge, a castle kitchen with a cook at the hearth, a chapel where a priest blesses a villager by candlelight, a hen yard, a pasture with a cow and a milkmaid, and a night watch at a campfire.

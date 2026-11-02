@@ -29,8 +29,8 @@
   <g fill="#2e9d5b"><use href="#s" x="925" y="10" width="265" height="14"/><rect x="925" y="22" width="265" height="196" rx="10"/></g>
   <text x="947" y="64" font-size="21" font-weight="700" fill="#fff">Ready to</text>
   <text x="947" y="90" font-size="21" font-weight="700" fill="#fff">build at home</text>
-  <text x="947" y="124" font-size="14" fill="#e3f5ea">Parts list, step-by-step</text>
-  <text x="947" y="144" font-size="14" fill="#e3f5ea">instructions, a model file</text>
-  <text x="947" y="164" font-size="14" fill="#e3f5ea">for BrickLink Studio and</text>
-  <text x="947" y="184" font-size="14" fill="#e3f5ea">true-colour renders.</text>
+  <text x="947" y="124" font-size="14" fill="#e3f5ea">Model files with building</text>
+  <text x="947" y="144" font-size="14" fill="#e3f5ea">steps for BrickLink Studio;</text>
+  <text x="947" y="164" font-size="14" fill="#e3f5ea">parts lists and instruction</text>
+  <text x="947" y="184" font-size="14" fill="#e3f5ea">booklets on the way.</text>
 </svg>

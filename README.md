@@ -4,14 +4,27 @@ Seven models from **text-to-brick**, a research project that turns a description
 
 **[▶ Open every model in interactive 3D](https://jakubchudik.github.io/text-to-brick-showcase/)**: drag to orbit, scroll to zoom, in the browser.
 
-**[How the builds are made](PROCESS.md)**: the process from a sentence to a buildable set, why it works this way, and how each build is judged ([page version](docs/process.html)).
-
 > Independent, non-commercial fan project. Not affiliated with, sponsored or endorsed by the LEGO Group. LEGO® is a trademark of the LEGO Group. The models use the community LDraw parts library (CC BY 4.0 / CC BY 2.0).
 
 | | | | |
 |:--:|:--:|:--:|:--:|
 | [![Amon Sûl (Weathertop)](builds/01-amon-sul/thumb.jpg)](#amon-sul)<br>**Amon Sûl (Weathertop)**<br>4,847 parts | [![The Colosseum](builds/02-colosseum/thumb.jpg)](#colosseum)<br>**The Colosseum**<br>10,764 parts | [![Spiš Castle](builds/03-spis-castle/thumb.jpg)](#spis-castle)<br>**Spiš Castle**<br>6,131 parts | [![Orthanc](builds/04-orthanc/thumb.jpg)](#orthanc)<br>**Orthanc**<br>6,742 parts |
 | [![Ministry of Magic](builds/05-ministry-of-magic/thumb.jpg)](#ministry-of-magic)<br>**Ministry of Magic**<br>5,122 parts | [![Neuschwanstein](builds/06-neuschwanstein/thumb.jpg)](#neuschwanstein)<br>**Neuschwanstein**<br>7,780 parts | [![Samoyed](builds/07-samoyed/thumb.jpg)](#samoyed)<br>**Samoyed**<br>3,854 parts |  |
+
+## What makes these builds different
+
+![Buildable, not just pretty · Scenes full of stories · Taste that compounds · Ready to build at home](docs/img/value.svg)
+
+## How they are made
+
+![From a sentence to a buildable set: plan the scene, build and review one piece at a time, then assemble, prove and publish](docs/img/process.svg)
+
+What we learned getting here:
+
+- **Small pieces beat whole scenes.** Building a big scene in one go never got past "almost". Building each part on its own, reviewing it, and reworking only what was flagged gets to a result the owner keeps in one or two rounds.
+- **Check before you build.** Fit, balance, colours and visibility are checked in seconds before a model is built, so a mistake costs seconds instead of minutes.
+- **Proven beats generated.** Against a leading AI model writing the bricks directly, these builds won 7 of 9 blind comparisons.
+- **Every review compounds.** Each verdict becomes a rule, a reusable recipe or a check, so the next set starts better than the last.
 
 ## How to open the models
 

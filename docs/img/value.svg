@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 230" width="1200" height="230" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <symbol id="s" viewBox="0 0 270 14"><rect x="28" y="0" width="34" height="14" rx="4"/><rect x="88" y="0" width="34" height="14" rx="4"/><rect x="148" y="0" width="34" height="14" rx="4"/><rect x="208" y="0" width="34" height="14" rx="4"/></symbol>
+  </defs>
+  <g fill="#2f6fd0"><use href="#s" x="10" y="10" width="270" height="14"/><rect x="10" y="22" width="270" height="196" rx="10"/></g>
+  <text x="32" y="64" font-size="21" font-weight="700" fill="#fff">Buildable,</text>
+  <text x="32" y="90" font-size="21" font-weight="700" fill="#fff">not just pretty</text>
+  <text x="32" y="124" font-size="14" fill="#e6eefc">Every part exists in its</text>
+  <text x="32" y="144" font-size="14" fill="#e6eefc">colour, every connection</text>
+  <text x="32" y="164" font-size="14" fill="#e6eefc">holds, and it stands on</text>
+  <text x="32" y="184" font-size="14" fill="#e6eefc">a table — proven, not hoped.</text>
+
+  <g fill="#f2b705"><use href="#s" x="315" y="10" width="270" height="14"/><rect x="315" y="22" width="270" height="196" rx="10"/></g>
+  <text x="337" y="64" font-size="21" font-weight="700" fill="#2b2306">Scenes full</text>
+  <text x="337" y="90" font-size="21" font-weight="700" fill="#2b2306">of stories</text>
+  <text x="337" y="124" font-size="14" fill="#4a3d0a">Not a building on a plate:</text>
+  <text x="337" y="144" font-size="14" fill="#4a3d0a">a place with figures doing</text>
+  <text x="337" y="164" font-size="14" fill="#4a3d0a">things and small surprises</text>
+  <text x="337" y="184" font-size="14" fill="#4a3d0a">to discover from every side.</text>
+
+  <g fill="#d6372d"><use href="#s" x="620" y="10" width="270" height="14"/><rect x="620" y="22" width="270" height="196" rx="10"/></g>
+  <text x="642" y="64" font-size="21" font-weight="700" fill="#fff">Taste that</text>
+  <text x="642" y="90" font-size="21" font-weight="700" fill="#fff">compounds</text>
+  <text x="642" y="124" font-size="14" fill="#fde4e1">Every review becomes a</text>
+  <text x="642" y="144" font-size="14" fill="#fde4e1">rule or a reusable recipe,</text>
+  <text x="642" y="164" font-size="14" fill="#fde4e1">so each new set starts</text>
+  <text x="642" y="184" font-size="14" fill="#fde4e1">where the last one ended.</text>
+
+  <g fill="#2e9d5b"><use href="#s" x="925" y="10" width="265" height="14"/><rect x="925" y="22" width="265" height="196" rx="10"/></g>
+  <text x="947" y="64" font-size="21" font-weight="700" fill="#fff">Ready to</text>
+  <text x="947" y="90" font-size="21" font-weight="700" fill="#fff">build at home</text>
+  <text x="947" y="124" font-size="14" fill="#e3f5ea">Parts list, step-by-step</text>
+  <text x="947" y="144" font-size="14" fill="#e3f5ea">instructions, a model file</text>
+  <text x="947" y="164" font-size="14" fill="#e3f5ea">for BrickLink Studio and</text>
+  <text x="947" y="184" font-size="14" fill="#e3f5ea">true-colour renders.</text>
+</svg>

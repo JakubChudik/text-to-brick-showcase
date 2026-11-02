@@ -4,6 +4,8 @@ Seven models from **text-to-brick**, a research project that turns a description
 
 **[▶ Open every model in interactive 3D](https://jakubchudik.github.io/text-to-brick-showcase/)**: drag to orbit, scroll to zoom, in the browser.
 
+**[How the builds are made](PROCESS.md)**: the process from a sentence to a buildable set, why it works this way, and how each build is judged ([page version](docs/process.html)).
+
 > Independent, non-commercial fan project. Not affiliated with, sponsored or endorsed by the LEGO Group. LEGO® is a trademark of the LEGO Group. The models use the community LDraw parts library (CC BY 4.0 / CC BY 2.0).
 
 | | | | |

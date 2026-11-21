@@ -9,7 +9,7 @@ Seven models from **text-to-brick**, a research project that turns a description
 | | | | |
 |:--:|:--:|:--:|:--:|
 | [![Amon Sûl (Weathertop)](builds/01-amon-sul/thumb.jpg)](#amon-sul)<br>**Amon Sûl (Weathertop)**<br>6,041 parts | [![The Colosseum](builds/02-colosseum/thumb.jpg)](#colosseum)<br>**The Colosseum**<br>10,615 parts | [![Spiš Castle](builds/03-spis-castle/thumb.jpg)](#spis-castle)<br>**Spiš Castle**<br>6,588 parts | [![Orthanc](builds/04-orthanc/thumb.jpg)](#orthanc)<br>**Orthanc**<br>7,223 parts |
-| [![Ministry of Magic](builds/05-ministry-of-magic/thumb.jpg)](#ministry-of-magic)<br>**Ministry of Magic**<br>5,216 parts | [![Neuschwanstein](builds/06-neuschwanstein/thumb.jpg)](#neuschwanstein)<br>**Neuschwanstein**<br>7,780 parts | [![Samoyed](builds/07-samoyed/thumb.jpg)](#samoyed)<br>**Samoyed**<br>3,854 parts |  |
+| [![Ministry of Magic](builds/05-ministry-of-magic/thumb.jpg)](#ministry-of-magic)<br>**Ministry of Magic**<br>5,216 parts | [![Neuschwanstein](builds/06-neuschwanstein/thumb.jpg)](#neuschwanstein)<br>**Neuschwanstein**<br>8,010 parts | [![Samoyed](builds/07-samoyed/thumb.jpg)](#samoyed)<br>**Samoyed**<br>4,094 parts |  |
 
 ## What makes these builds different
 
@@ -58,10 +58,10 @@ Every `.ldr` file is a standard [LDraw](https://www.ldraw.org/) model with build
 | 3 | [Spiš Castle](#spis-castle) | 6,588 | 98 | 21 | 15 |
 | 4 | [Orthanc](#orthanc) | 7,223 | 111 | 25 | 24 |
 | 5 | [Ministry of Magic](#ministry-of-magic) | 5,216 | 81 | 22 | 20 |
-| 6 | [Neuschwanstein](#neuschwanstein) | 7,780 | 111 | 19 | 9 |
-| 7 | [Samoyed](#samoyed) | 3,854 | 49 | 9 | - |
+| 6 | [Neuschwanstein](#neuschwanstein) | 8,010 | 112 | 21 | 13 |
+| 7 | [Samoyed](#samoyed) | 4,094 | 50 | 9 | - |
 
-Five builds have been through the full strength solve (a force-balance model of every stud connection that knows when a clutch gives way, the model standing on a table) and pass it, with the share of grip left to spare: Ministry of Magic 0.97, Neuschwanstein 0.895, Amon Sûl 0.884, the Colosseum 0.845 and Orthanc 0.50. Spiš Castle v6 has not: the solve stops at three hill bricks that rest on one end. The Samoyed has not been through it. The Colosseum also has a full proof of all 2,319 building steps and a generated instruction booklet; the booklets of Amon Sûl, Orthanc and the Ministry of Magic are each held up by a single brick that rests on one end at one step.
+Six builds have been through the full strength solve (a force-balance model of every stud connection that knows when a clutch gives way, the model standing on a table) and pass it, with the share of grip left to spare: Ministry of Magic 0.97, Amon Sûl 0.884, Neuschwanstein 0.88, the Colosseum 0.845, Orthanc 0.50 and the Samoyed 0.25 (exactly the minimum we accept). Spiš Castle v6 has not: the solve stops at three hill bricks that rest on one end. The Colosseum and the Samoyed also have a full proof of every building step and a generated instruction booklet; the booklets of Amon Sûl, Orthanc, the Ministry of Magic and Neuschwanstein are each held up by a single brick that rests on one end at one step.
 
 ---
 
@@ -324,15 +324,18 @@ What was asked for, the moment, the feeling and the must-sees: [`design-brief.md
 <a id="neuschwanstein"></a>
 ## 6. Neuschwanstein
 
-*The fairy-tale castle above the gorge.* **7,780 parts**, 111 part designs, 19 colours, 9 minifigures.
+*The fairy-tale castle above the gorge.* **8,010 parts**, 112 part designs, 21 colours, 13 minifigures.
 
 [![Neuschwanstein turntable](builds/turntables/neuschwanstein.gif)](builds/turntables/neuschwanstein.mp4)
 
-[Turntable, one 360° turn in 12 s (MP4, 3.8 MB)](builds/turntables/neuschwanstein.mp4) · [Interactive 3D](https://jakubchudik.github.io/text-to-brick-showcase/#neuschwanstein) · [`neuschwanstein.ldr`](builds/06-neuschwanstein/neuschwanstein.ldr) · [`neuschwanstein.glb`](docs/models/neuschwanstein.glb)
+[Turntable, one 360° turn in 12 s (MP4, 3.7 MB)](builds/turntables/neuschwanstein.mp4) · [Interactive 3D](https://jakubchudik.github.io/text-to-brick-showcase/#neuschwanstein) · [`neuschwanstein.ldr`](builds/06-neuschwanstein/neuschwanstein.ldr) · [`neuschwanstein.glb`](docs/models/neuschwanstein.glb)
 
-- Neuschwanstein Castle on its crag above the Pöllat gorge: the white Palas with staggered blocks and an attached oriel tower, grey-spired towers, the gatehouse, and the Marienbrücke across the gorge. Below it a forest on four levels of hillside, with spruces, pines and broadleaf trees of many heights, ferns, flowers and boulders, and the Alpsee with two white birds.
-- Small scenes with real minifigures and animals: tourists photographing the gorge from the bridge, a coachman with his horse and carriage on the forest road, a hiker and his dog on the trail, a hunter and a deer in a clearing, the king on a balcony of the Palas, masons on a scaffold at the gatehouse, and a forester's camp at the back.
-- 9 minifigures and a handful of animals; the foliage is real tree, bush, fern and flower parts.
+- Neuschwanstein Castle on its grey crag above the Pöllat gorge: the white Palas with its staggered blocks and the slender north stair tower, grey-spired towers, the Bower and the Knights' House around the upper court, the gatehouse in warm brick and tan, and the Marienbrücke across the gorge.
+- Below it a forest on several levels of hillside, with conifers of many heights, a layered fir in a clearing, flowers and boulders; the Alpsee with its swans now has a shoreline, and a sandy castle road climbs past the trees.
+- Five smaller scenes, each built and checked on its own and then joined: the Pöllat gorge and the Marienbrücke, with tourists on the bridge; the Palas on its crag, with the king on his balcony and a forester's camp; the upper court and the gatehouse, with two guards at the gate and masons on a scaffold; the Alpsee and the west hillside, with a hiker and his dog; and the east hillside and the road, with a supply horse, a hunter and travellers on their way up.
+- 13 minifigures counted by head, and animals: swans, a dog, a horse and a deer. The foliage is real tree, bush and flower parts.
+- This is a final: the strength solve (the model standing on a table) and the proof of all 1,754 building steps passed with warnings. The instruction booklet was refused at step 256, where a dark green 6 x 6 plate rests on one end over a gap, so no booklet is published.
+- Still open: the east hillside has fewer small trees than the version before, because the clearing for the layered fir took their place; from the front-right view the king is hidden behind the oriel (the close-up shows him); and the court scene is not quite the dominant thing in its view.
 
 | Front three-quarter | The other side |
 |---|---|
@@ -340,25 +343,51 @@ What was asked for, the moment, the feeling and the must-sees: [`design-brief.md
 | **From behind** | **From high above** |
 | ![Neuschwanstein from behind](builds/06-neuschwanstein/back.jpg) | ![Neuschwanstein from above](builds/06-neuschwanstein/birds-eye.jpg) |
 
-| Two white birds on the Alpsee | Tourists on the Marienbrücke |
+### Smaller scenes
+
+| S1 · The Pöllat gorge and the Marienbrücke | S2 · The Palas on its crag |
 |---|---|
-| ![Two white birds on the Alpsee](builds/06-neuschwanstein/close-lake-birds.jpg) | ![Tourists on the Marienbrücke](builds/06-neuschwanstein/close-bridge.jpg) |
-| **The coachman, the hunter and the deer in the meadow** | **The king on his balcony** |
-| ![The coachman, the hunter and the deer in the meadow](builds/06-neuschwanstein/close-meadow.jpg) | ![The king on his balcony](builds/06-neuschwanstein/close-king-on-the-balcony.jpg) |
+| ![S1 The Pöllat gorge and the Marienbrücke](builds/06-neuschwanstein/scene-s1-the-poellat-gorge-and-the-marienbruecke.jpg) | ![S2 The Palas on its crag](builds/06-neuschwanstein/scene-s2-the-palas-on-its-crag.jpg) |
+| **S3 · The upper court and the gatehouse** | **S4 · The Alpsee and the west hillside** |
+| ![S3 The upper court and the gatehouse](builds/06-neuschwanstein/scene-s3-the-upper-court-and-the-gatehouse.jpg) | ![S4 The Alpsee and the west hillside](builds/06-neuschwanstein/scene-s4-the-alpsee-and-the-west-hillside.jpg) |
+| **S5 · The east hillside and the castle road** |  |
+| ![S5 The east hillside and the castle road](builds/06-neuschwanstein/scene-s5-the-east-hillside-and-the-castle-road.jpg) |  |
+
+| S1.1 · The tourists on the Marienbrücke | S2.2 · The king on the balcony |
+|---|---|
+| ![S1.1 The tourists on the Marienbrücke](builds/06-neuschwanstein/close-tourists-on-the-bridge.jpg) | ![S2.2 The king on the balcony](builds/06-neuschwanstein/close-king-on-the-balcony.jpg) |
+| **S3.2 · The gatehouse and its guards** | **S3.3 · Masons on the scaffold** |
+| ![S3.2 The gatehouse and its guards](builds/06-neuschwanstein/close-gate-guards.jpg) | ![S3.3 Masons on the scaffold](builds/06-neuschwanstein/close-masons-on-the-scaffold.jpg) |
+| **S4.2 · The hiker and his dog** | **S5.2 · The supply horse** |
+| ![S4.2 The hiker and his dog](builds/06-neuschwanstein/close-hiker-and-dog.jpg) | ![S5.2 The supply horse](builds/06-neuschwanstein/close-the-supply-horse.jpg) |
+| **S5.4 · Travellers on the road** |  |
+| ![S5.4 Travellers on the road](builds/06-neuschwanstein/close-travellers-on-the-road.jpg) |  |
+
+<details>
+<summary>The design brief</summary>
+
+What was asked for, the moment, the feeling and the must-sees: [`design-brief.md`](builds/06-neuschwanstein/design-brief.md). The request:
+
+> The owner chose Schloss Neuschwanstein as a landmark for the public showcase (19 October 2026). On earlier versions (27 October 2026): "both are great, X is better because the castle is not as flat as in Y, although I like the windows and the extra attached tower of Y, so maybe a combination of the two... also the bridge over the river on X is awesome". And (28 October 2026): "I like the bottom Y with the little birds on the lake and more forests, maybe some trees. That looks amazing. We should definitely be moving in that direction with our build."
+
+</details>
 
 ---
 
 <a id="samoyed"></a>
 ## 7. Samoyed
 
-*A sitting dog on a round lawn.* **3,854 parts**, 49 part designs, 9 colours.
+*A sitting dog on its lawn.* **4,094 parts**, 50 part designs, 9 colours.
 
 [![Samoyed turntable](builds/turntables/samoyed.gif)](builds/turntables/samoyed.mp4)
 
-[Turntable, one 360° turn in 12 s (MP4, 2.2 MB)](builds/turntables/samoyed.mp4) · [Interactive 3D](https://jakubchudik.github.io/text-to-brick-showcase/#samoyed) · [`samoyed.ldr`](builds/07-samoyed/samoyed.ldr) · [`samoyed.glb`](docs/models/samoyed.glb)
+[Turntable, one 360° turn in 12 s (MP4, 2.5 MB)](builds/turntables/samoyed.mp4) · [Interactive 3D](https://jakubchudik.github.io/text-to-brick-showcase/#samoyed) · [`samoyed.ldr`](builds/07-samoyed/samoyed.ldr) · [`samoyed.glb`](docs/models/samoyed.glb)
 
-- A Samoyed sitting on a small round lawn: a coat of curved slopes and tiles shingled like fur, a face that reads at once (almond eyes, a black nose, a smile with a pink tongue), cream-lined ears, a thick ruff, and a plume tail that curls up and over.
+- A Samoyed sitting on a green lawn: a coat of curved slopes and tiles shingled like fur, a playful face that reads at once (black eyes and nose, a smile with a pink tongue), cream-lined ears, a thick ruff, and a plume tail that curls up and over the back.
+- New in this version: more detailed legs (a tapered forearm, fur locks on the outside and inside, elbow, hock and thigh) and light grey toe blocks in front of each paw, while keeping the face, tail and floor the owner picked before.
 - On the lawn a red ball and a few flowers. The model is shown on a dark backdrop, which the renderer picks for mostly white builds.
+- This is a final: the strength solve passed (exactly at the minimum grip we accept, 0.25), all 890 building steps were proven, and an instruction booklet was generated (not yet published).
+- Still open: the toe blocks read as grey patches on the paws rather than as separate toes.
 
 | Front three-quarter | The other side |
 |---|---|
@@ -369,8 +398,17 @@ What was asked for, the moment, the feeling and the must-sees: [`design-brief.md
 | The face | Front legs and paws |
 |---|---|
 | ![The face](builds/07-samoyed/close-face.jpg) | ![Front legs and paws](builds/07-samoyed/close-paws.jpg) |
-| **The plume tail and the profile** | **Hind paw, red ball and flowers on the lawn** |
-| ![The plume tail and the profile](builds/07-samoyed/close-tail.jpg) | ![Hind paw, red ball and flowers on the lawn](builds/07-samoyed/close-lawn.jpg) |
+| **The plume tail from behind** | **The lawn, the red ball and the flowers** |
+| ![The plume tail from behind](builds/07-samoyed/close-tail.jpg) | ![The lawn, the red ball and the flowers](builds/07-samoyed/close-lawn.jpg) |
+
+<details>
+<summary>The design brief</summary>
+
+What was asked for, the moment, the feeling and the must-sees: [`design-brief.md`](builds/07-samoyed/design-brief.md). The request:
+
+> The owner chose Yoggi, the owner's young Samoyed, for the public showcase (19 October 2026). On the coat (21 October 2026): "the fur is better but looks more jagged, that's not the essence of a samoyed coat. it should be fluffy, royal, with long white strands that sometimes stick out to the side but sometimes elegantly fall one over another, high polish". On the version that won (28 October 2026): "Y def much better, I like the floor desing and the playful face of the dog and the 3D tail ... it would be great to add more details on legs and paws too".
+
+</details>
 
 ---
 

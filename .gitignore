@@ -1,0 +1,3 @@
+.DS_Store
+builds/turntables/.frames-*/
+.playwright-mcp/

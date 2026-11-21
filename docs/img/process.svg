@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7a8394"/></marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#d6372d"/></marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#2e9d5b"/></marker>
+    <!-- a brick: body + four studs -->
+    <symbol id="studs" viewBox="0 0 200 14"><rect x="22" y="0" width="26" height="14" rx="4"/><rect x="66" y="0" width="26" height="14" rx="4"/><rect x="110" y="0" width="26" height="14" rx="4"/><rect x="154" y="0" width="26" height="14" rx="4"/></symbol>
+  </defs>
+
+  <!-- phase labels -->
+  <g font-size="13" font-weight="700" letter-spacing="2" fill="#7a8394">
+    <text x="40" y="34">1 · PLAN</text>
+    <text x="330" y="34">2 · BUILD SMALL, REVIEW SMALL</text>
+    <text x="900" y="34">3 · FINISH</text>
+  </g>
+
+  <!-- PLAN: blue bricks -->
+  <g fill="#2f6fd0"><use href="#studs" x="40" y="64" width="220" height="14"/><rect x="40" y="76" width="220" height="96" rx="8"/></g>
+  <text x="58" y="112" font-size="19" font-weight="700" fill="#fff">A sentence</text>
+  <text x="58" y="138" font-size="14" fill="#e6eefc">"Christmas market in</text>
+  <text x="58" y="157" font-size="14" fill="#e6eefc">Copenhagen, ~10,000 parts"</text>
+
+  <g fill="#2f6fd0"><use href="#studs" x="40" y="236" width="220" height="14"/><rect x="40" y="248" width="220" height="112" rx="8"/></g>
+  <text x="58" y="282" font-size="19" font-weight="700" fill="#fff">Scene plan</text>
+  <text x="58" y="306" font-size="14" fill="#e6eefc">one big scene, a few</text>
+  <text x="58" y="325" font-size="14" fill="#e6eefc">smaller scenes, many</text>
+  <text x="58" y="344" font-size="14" fill="#e6eefc">little stories to discover</text>
+
+  <!-- BUILD: yellow bricks + owner review -->
+  <g fill="#f2b705"><use href="#studs" x="330" y="64" width="250" height="14"/><rect x="330" y="76" width="250" height="96" rx="8"/></g>
+  <text x="348" y="112" font-size="19" font-weight="700" fill="#2b2306">Build one piece</text>
+  <text x="348" y="138" font-size="14" fill="#4a3d0a">real LEGO parts, proven kits,</text>
+  <text x="348" y="157" font-size="14" fill="#4a3d0a">recipes from earlier builds</text>
+
+  <g fill="#f2b705"><use href="#studs" x="330" y="236" width="250" height="14"/><rect x="330" y="248" width="250" height="112" rx="8"/></g>
+  <text x="348" y="282" font-size="19" font-weight="700" fill="#2b2306">Check &amp; render</text>
+  <text x="348" y="306" font-size="14" fill="#4a3d0a">fits, stands, colours exist,</text>
+  <text x="348" y="325" font-size="14" fill="#4a3d0a">key details visible —</text>
+  <text x="348" y="344" font-size="14" fill="#4a3d0a">in seconds, before building</text>
+
+  <g fill="#d6372d"><use href="#studs" x="640" y="150" width="200" height="14"/><rect x="640" y="162" width="200" height="120" rx="8"/></g>
+  <text x="658" y="198" font-size="19" font-weight="700" fill="#fff">Owner reviews</text>
+  <text x="658" y="222" font-size="14" fill="#fde4e1">each piece on its own:</text>
+  <text x="658" y="250" font-size="16" font-weight="700" fill="#fff">keep · redo · maybe</text>
+
+  <!-- FINISH: green bricks -->
+  <g fill="#2e9d5b"><use href="#studs" x="900" y="64" width="260" height="14"/><rect x="900" y="76" width="260" height="96" rx="8"/></g>
+  <text x="918" y="112" font-size="19" font-weight="700" fill="#fff">Assemble kept pieces</text>
+  <text x="918" y="138" font-size="14" fill="#e3f5ea">every little story stays</text>
+  <text x="918" y="157" font-size="14" fill="#e3f5ea">in view of the camera</text>
+
+  <g fill="#2e9d5b"><use href="#studs" x="900" y="236" width="260" height="14"/><rect x="900" y="248" width="260" height="112" rx="8"/></g>
+  <text x="918" y="282" font-size="19" font-weight="700" fill="#fff">Prove &amp; publish</text>
+  <text x="918" y="306" font-size="14" fill="#e3f5ea">strength checked, step-by-step</text>
+  <text x="918" y="325" font-size="14" fill="#e3f5ea">instructions, parts list,</text>
+  <text x="918" y="344" font-size="14" fill="#e3f5ea">renders, 3D model</text>
+
+  <!-- main flow -->
+  <g stroke="#7a8394" stroke-width="2.5" fill="none" marker-end="url(#a)">
+    <path d="M150 174 V228"/>
+    <path d="M262 304 H296 V124 H322"/>
+    <path d="M455 174 V228"/>
+    <path d="M582 304 H620 V222 H632"/>
+    <path d="M842 222 H870 V124 H892"/>
+    <path d="M1030 174 V228"/>
+  </g>
+
+  <!-- redo loop -->
+  <path d="M740 290 V410 H598 V120 H590" stroke="#d6372d" stroke-width="2.5" stroke-dasharray="7 6" fill="none" marker-end="url(#ar)"/>
+  <text x="610" y="432" font-size="14" font-weight="700" fill="#d6372d">redo → rebuild only that piece</text>
+
+  <!-- learning loop -->
+  <path d="M1030 362 V470 H150 V364" stroke="#2e9d5b" stroke-width="2.5" stroke-dasharray="2 6" stroke-linecap="round" fill="none" marker-end="url(#ag)"/>
+  <rect x="340" y="452" width="520" height="36" rx="18" fill="#2e9d5b"/>
+  <text x="600" y="476" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">Every build teaches the next: taste rules, recipes, lessons</text>
+
+  <text x="600" y="536" font-size="14" fill="#7a8394" text-anchor="middle">The owner's eye goes to small pieces that are easy to judge; everything that can be checked is checked by the machine.</text>
+</svg>

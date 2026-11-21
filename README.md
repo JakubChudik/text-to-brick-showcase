@@ -61,7 +61,7 @@ Every `.ldr` file is a standard [LDraw](https://www.ldraw.org/) model with build
 | 6 | [Neuschwanstein](#neuschwanstein) | 7,780 | 111 | 19 | 9 |
 | 7 | [Samoyed](#samoyed) | 3,854 | 49 | 9 | - |
 
-Colosseum and Neuschwanstein have also been through the full strength solve (a force-balance model of the studs that knows when a clutch gives way, the model standing on a table): both pass the table test, with margins of 0.845 and 0.895. The Ministry of Magic v5 passes it too, with a margin of 0.97. Spiš Castle v6 has not: the solve stops at three hill bricks that rest on one end.
+Five builds have been through the full strength solve (a force-balance model of every stud connection that knows when a clutch gives way, the model standing on a table) and pass it, with the share of grip left to spare: Ministry of Magic 0.97, Neuschwanstein 0.895, Amon Sûl 0.884, the Colosseum 0.845 and Orthanc 0.50. Spiš Castle v6 has not: the solve stops at three hill bricks that rest on one end. The Samoyed has not been through it. The Colosseum also has a full proof of all 2,319 building steps and a generated instruction booklet; the booklets of Amon Sûl, Orthanc and the Ministry of Magic are each held up by a single brick that rests on one end at one step.
 
 ---
 
